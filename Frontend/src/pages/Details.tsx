@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 
 interface ProductDetails {
@@ -20,7 +20,7 @@ const Details : React.FC =()=>{
     const { id } = useParams<{ id: string }>();
 
     useEffect(()=>{
-        axios.get (`http://localhost:8081/products/${id}`)
+        axios.get (`https://storify-2-0.onrender.com/products/${id}`)
         .then ((res) => {
             setDetails(res.data)
         })

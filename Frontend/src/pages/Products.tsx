@@ -25,23 +25,23 @@ const Products: React.FC =()=>{
 
 
     useEffect (()=>{
-        axios.get ("http://localhost:8081/products")
+        axios.get ("https://storify-2-0.onrender.com/products")
         .then ((res) => 
         setProducts (res.data)
       )
       .catch ((err) =>{
-        alert('error fetching products')
+        alert(err)
       })
     
       },[])
 
       useEffect (()=>{
-        axios.get ("http://localhost:8081/categories")
+        axios.get ("https://storify-2-0.onrender.com/categories")
         .then ((res) => {
             setCategory(res.data)
         })
         .catch ((err) => {
-            alert ('Error Fetching Categories')
+            console.log(err)
         })
 
       },[])

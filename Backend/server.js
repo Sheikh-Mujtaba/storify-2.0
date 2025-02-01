@@ -7,7 +7,7 @@ const app = express() ;
 
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:5173', // React app's origin
+    origin: 'https://storify-app.netlify.app', // React app's origin
     credentials: true,
   }));
 
