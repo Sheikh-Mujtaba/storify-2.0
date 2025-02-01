@@ -9,6 +9,7 @@ app.use(express.json());
 app.use(cors({
     origin: 'https://storify-app.netlify.app', // React app's origin
     credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
   }));
 
 
